@@ -1,0 +1,598 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #141414;
+}
+
+a {
+  color: white;
+}
+
+.header {
+	background-color: #141414;
+	box-shadow: 0px 1px 0px 0px rgb(87 87 87);
+	
+}
+
+.header-container{
+	width: 80%;
+	margin: auto;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  /* border-right: 1px solid #f4f4f4; */
+  text-decoration: none;
+  font-size : 1.2em;
+  
+}
+
+.li-telegram:hover{
+	opacity : 0.8;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color:#807f7f;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 500px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: right;
+  }
+  .header li a {
+    padding: 20px 30px;
+	
+  }
+  .header .menu {
+    clear: none;
+    /* float: right; */
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .header li {
+    background: #353131;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  .title {
+	  font-size:2em !important;
+	  width:100% !important;
+	  
+  }
+  .video-container {
+	  
+	  width: 90% !important;
+  }
+  .inMiddle{
+	  
+	  width: 90% !important;
+	  
+  }
+  .small-profiles{
+	  display:none !important;
+  }
+  .profile-container{
+	  width : unset !important;
+  }
+  
+  .profile-image-large{
+	width: 30px !important;
+    height: 30px !important;
+  }
+  .profile-name{
+	  font-size: 0.9em !important;
+  }
+  .profile-status{
+	  font-size: 0.6em !important;
+  }
+  .header li a{
+	  font-size: 0.9em !important;
+	  padding: 10px 10px !important;
+  }
+  .header .logo{
+	  font-size: 1.5em !important;
+  }
+	.header-container{
+		width: 100% !important;
+		margin: unset !important;
+	}
+	.description{
+		font-size: 0.9rem !important;
+	}
+	.points{
+		width: 100% !important;
+	}
+	.faq-section{
+		width: 100% !important;
+	}
+	.faq-question{
+	    font-size: 0.9em !important;
+	}
+}
+
+/* Reverse the order of the menu items */
+@media (max-width: 48em) { /* This applies to mobile and any screen sizes smaller than 768px */
+  .header .menu {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 48em) { /* This applies to screens larger than 768px, typically desktops */
+  .header .menu {
+    display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: flex-end; */
+  }
+}
+
+
+/* ################### */
+
+
+.content {
+  flex: 1;
+  width:85%;
+  margin:80px auto;
+  
+  /* Your content styles here */
+}
+
+
+
+/* Styles for your title */
+.title {
+	font-size: 4.5em; /* 2rem is typically a good size for titles */
+	font-weight: 700; /* 700 is for bold text */
+	color: #0A84FF; /* Assuming you want a white title for your dark background */
+	text-align: center; /* Center the title */
+	margin-top: 20px; /* Add some space at the top */
+	width: 50%;
+	margin: auto;
+}
+
+
+.profile-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 50%;
+	margin: auto;
+	color:white;
+}
+
+.main-profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image-large {
+  width: 40px; /* or your preferred size */
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-name {
+  margin-right: 10px;
+  font-size: 1.1em;
+  cursor:pointer;
+  color:hsla(0,0%,100%,.7);
+}
+
+.profile-status {
+    margin-right: 10px;
+    color: hsla(0, 0%, 100%, .35);
+    background-color: hsla(0, 0%, 100%, .04);
+    padding: 4px 9px;
+    border-radius: 25px;
+    font-size: 0.8em;
+}
+
+.small-profiles {
+  display: flex;
+  align-items: center;
+}
+
+.small-profile {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.profiles-status {
+    margin-right: 10px;
+    color: hsla(0, 0%, 100%, .35);
+    background-color: hsl(0deg 0% 11.37%);
+    padding: 4px 9px;
+    border-radius: 25px;
+    font-size: 0.8em;
+    border: solid 3px #141414;
+    z-index: 24;
+    margin-left: 9px;
+}
+
+.profile-image-small {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: -22px;
+    border: solid 3px #141414;
+}
+
+.small-profile-status {
+  /* Style for the span next to small profile images */
+}
+
+
+/* Styles for your description */
+.description {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.3rem;
+	font-weight: 400;
+	color: #b1afaf;
+	/* max-width: 49%; */
+	/* margin: auto; */
+	line-height: 1.5em;
+}
+
+
+
+.clear{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	
+}
+.clear-description{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
+}
+
+.video-container {
+
+  width: 52%; /* Same as video width */
+  margin:auto;
+}
+
+.video-C{
+position: relative;
+/* border: solid 1.5px #423f3f94; */
+	
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  
+}
+
+.video-btn {
+  border-radius: 50%; /* Circular shape */
+  margin : 2px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 50px; /* Center the icon vertically */
+  text-align: center;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Changing the play button to pause icon when video is playing */
+.video-btn.playing {
+  font-size: 30px;
+}
+
+/* Fullscreen button styles */
+.video-btn.full-screen {
+  display: none; /* Hide by default, will be shown by JS when supported */
+}
+
+
+.note{
+    background-color: #212121;
+    padding: 14px;
+    border-radius: 10px;
+    color: #9c9797;
+    font-size: 1.1em;
+    line-height: 1.4;
+	
+}
+
+.points{
+	width:49%;
+	margin:auto;
+}
+
+.inMiddle{
+	
+	width:49%;
+	margin:auto;
+	
+}
+
+
+
+.faq-section {
+  margin: 20px;
+  width:50%;
+  margin:auto;
+  color:white;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+	width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+	background-color: silver;
+}
+
+.faq-question:hover {
+  background-color: #ddd;
+}
+
+.faq-answer {
+	padding: 0;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+	
+	
+}
+
+.faq-answer p {
+  padding: 15px;
+  margin: 0;
+}
+
+
+.faq-icon {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.faq-icon.open {
+  transform: rotate(45deg); /* Change this to suit the icon you choose */
+}
+
+
+
+.steps{
+	
+	color: #a8ac56;
+	font-size: 1.3em;
+}
+
+
+
+/* Styles for the overall container */
+.mev-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 40%;
+	margin: 0 auto;
+	border-radius: 10px;
+	background: hsla(0, 0%, 100%, .04);
+	padding: 0 20px;
+	box-sizing: border-box;}
+
+/* Styles for the left section */
+.mev-left-section {
+  flex-basis: 50%;
+}
+
+/* Styles for the right section */
+.mev-right-section {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Styles for the input */
+.mev-container input[type="email"] {
+    border-top-left-radius: 5px;
+    margin-right: 10px;
+    border-bottom-left-radius: 5px;
+    background: #141414;
+    color: #a7a7a7 !important;
+	padding: 10px;
+	font-weight: 700;
+    color: white !important;
+	padding: 10px;
+	font-weight: 700;
+	font-size: 0.9em;
+}
+
+/* Styles for the button */
+.mev-container button {
+	background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: -11px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+	padding:19px;
+  
+}
+
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .mev-container {
+    flex-direction: column;
+    width: 100%; /* Increase width for smaller screens */
+  }
+  
+  .mev-left-section, .mev-right-section {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .mev-right-section {
+    justify-content: center;
+  }
+  
+  .mev-container input[type="email"], .mev-container button {
+    width: unset !important;
+  }
+  .mev-container button {
+	padding: 11px !important;
+  }
+}
+
+
+
+#subscription-status {
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+
+
+
+
+
+.eth-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.eth-table th, .eth-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+.eth-table th {
+    background-color: #272a27;
+    color: white;
+	font-weight:500;
+}
+
